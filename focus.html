@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/timer.css">
+    <title>Timer page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row ">
+
+            <!-- sidebar start ----------------------------->
+
+            <div class="d-lg-none offcanvas offcanvas-start  offcanvas-mine p-0" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-body d-flex col-lg-2 p-0 m-0 vh-100 shadow nav-container flex-column align-items-center">
+                    <div class="offcanvas-header logo-container">
+                        <span class="nav-logo text-light fs-5 fw-bold">لوگوی سایت </span>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <hr>
+                    <ul class="nav d-block">
+                        <li class="nav-item d-flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                class="bi bi-house" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                            </svg>
+                            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">داشبورد</a>
+                        </li>
+                        <li class="nav-item d-flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                class="bi bi-card-checklist" viewBox="0 0 16 16">
+                                <path
+                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                                <path
+                                    d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0" />
+                            </svg>
+                            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="Todo.html">برنامه</a>
+                        </li>
+                        <li class="nav-item d-flex gap-2 nav-item-active">
+                            <img src="images/icon/focus1.svg" width="25" height="25" alt="">
+                            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="focus.html"
+                                target="_parent">تمرکز</a>
+                        </li>
+                        <li class="nav-item d-flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                class="bi bi-calendar-week" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
+                                <path
+                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                            </svg>
+                            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">تقویم</a>
+                        </li>
+                        <li class="nav-item d-flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">تحلیل</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="d-flex col-lg-2 d-none d-lg-block p-0 m-0 vh-100 shadow nav-container flex-column align-items-center">
+                <div class="logo-container">
+                    <span class="nav-logo text-light fs-5 fw-bold">لوگوی سایت </span>
+
+                </div>
+                <hr>
+                <ul class="nav d-block">
+                    <!-- active?? -->
+                    <li class="nav-item d-flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                            class="bi bi-house" viewBox="0 0 16 16">
+                            <path
+                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                        </svg>
+                        <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">داشبورد</a>
+                    </li>
+                    <li class="nav-item d-flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                            class="bi bi-card-checklist" viewBox="0 0 16 16">
+                            <path
+                                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                            <path
+                                d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0" />
+                        </svg>
+                        <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="Todo.html">برنامه</a>
+                    </li>
+                    <li class="nav-item d-flex gap-2 nav-item-active">
+                        <img src="images/icon/focus1.svg" width="25" height="25" alt="">
+                        <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="focus.html"
+                            target="_parent">تمرکز</a>
+                    </li>
+                    <li class="nav-item d-flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                            class="bi bi-calendar-week" viewBox="0 0 16 16">
+                            <path
+                                d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
+                            <path
+                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                        </svg>
+                        <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">تقویم</a>
+                    </li>
+                    <li class="nav-item d-flex gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                            class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                        <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">تحلیل</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- sidebar end -------------------------------->
+
+            <div class="col-lg-10 p-0">
+
+                <!-- header start ------------------------------>
+
+                <nav class="navbar navbar-expand-lg main-Header py-4">
+                    <div class="container-fluid">
+                        <button class="btn offcanvas-toggle  d-lg-none" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="navBarBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                        </button>
+                        <!-- collapse ! -->
+                        <!-- <form class="d-flex ps-4">
+                            <input class="form-control me-2 search-input" type="search" placeholder="جست و جو  ..."
+                                aria-label="Search">
+                        </form> -->
+                    </div>
+                </nav>
+
+                <!-- <div class="breadcrumb">TODO / BreadCrump</div> =======-->
+
+                <!-- header end ---------------------------------->
+                <!-- alert start -->
+                <div class="alert alert-info d-none" id="Input-alert" role="alert">
+                    عدد را بدون اعشار وارد کنید!
+                </div>
+                <!-- alert end -->
+                <!-- body start -->
+                <div class="card shadow m-4 mt-5 border-0 main-card-timer">
+                    <div class="card-body">
+
+                        <!-- timer start -->
+                        <div id="time">
+                            <div class="circle" style="--clr:#00FFCC;">
+                                <div class="dots time_dots"></div>
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70" id="ss"></circle>
+                                </svg>
+                                <div><span id="minutes">00</span>:<span id="seconds">00</span></div>
+                            </div>
+                            <div class="timer-buttons">
+                                <button class="btn text-bg-success timer-button p-1 rounded-pill" id="startButton"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-play-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                        <path
+                                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                                    </svg></button>
+                                <button class="btn text-bg-success timer-button p-1 rounded-pill" id="stopButton"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-pause-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                        <path
+                                            d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0z" />
+                                    </svg></button>
+                                <button class="btn text-bg-success timer-button" id="ResetButton">نوسازی</button>
+                            </div>
+                            <!-- <div class="circle" style="--clr:#00FFCC;">
+                                <div class="dots time_dots"></div>
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70" id="ss"></circle>
+                                </svg>
+                                <div><span id="minutes">00</span>:<span id="seconds">00</span></div>
+                            </div> -->
+                            <div class="circle" style="--clr:#3BBEBE;">
+                                <div class="dots aim_dots"></div>
+                                <svg>
+                                    <circle cx="70" cy="70" r="70"></circle>
+                                    <circle cx="70" cy="70" r="70" id="aa"></circle>
+                                </svg>
+                                <div><span id="aim-hours">00</span>:<span id="aim-minutes">00</span></div>
+                            </div>
+
+                            <audio id="alarmSound" src="audio/alarm-clock-short-6402.mp3" preload="auto"></audio>
+                        </div>
+
+                        <div class="inputs d-flex justify-content-evenly mt-5">
+                            <div class=""><label class="me-2 fs-6">تمرکز :</label><input type="number"
+                                    class="timer-input" id="focus-input" placeholder="پیشفرض : 25 دقیقه"></div>
+                            <div class=""><label class="me-2 fs-6">هدفگذاری :</label><input type="number"
+                                    class="timer-input" id="aim-input" placeholder="پیش فرض : 8 ساعت"></div>
+                            <button class="btn btn-outline-success" id="input-submit">ثبت اطلاعات</button>
+                        </div>
+                        <!-- timer end -->
+                    </div>
+                </div>
+                <!-- body end -->
+
+            </div>
+        </div>
+
+
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/timer.js"></script>
+</body>
+
+</html>
