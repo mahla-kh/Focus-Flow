@@ -14,12 +14,6 @@ Stay productive with a smart to-do list and a fully customizable focus timer. Or
 - **Vanilla JavaScript** — for logic and interactivity  
 - **Bootstrap** — for modern and responsive UI  
 
-## 📦 Installation  
-
-Clone the repository:  
-```bash
-git clone https://github.com/your-username/Focus-Flow.git
-
 📸 Screenshots
 
 ![Bite Alchemy Home Page](images/Todo.png)
