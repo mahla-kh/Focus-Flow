@@ -1,230 +1,384 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <title>Todo Page</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <title>Todo Page</title>
-</head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- sidebar start ----------------------------->
 
-<body>
-
-  <div class="container-fluid">
-    <div class="row ">
-
-      <!-- sidebar start ----------------------------->
-
-      <div class="d-lg-none offcanvas offcanvas-start  offcanvas-mine p-0" tabindex="-1" id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-body d-flex col-lg-2 p-0 m-0 vh-100 shadow nav-container flex-column align-items-center">
-          <div class="offcanvas-header logo-container">
-            <span class="nav-logo text-light fs-5 fw-bold">لوگوی سایت </span>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div
+          class="d-lg-none offcanvas offcanvas-start offcanvas-mine p-0"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div
+            class="offcanvas-body d-flex col-lg-2 p-0 m-0 vh-100 shadow nav-container flex-column align-items-center"
+          >
+            <div class="offcanvas-header logo-container">
+              <span class="nav-logo text-light fs-5 fw-bold"> M_KH </span>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <hr />
+            <ul class="nav d-block p-0">
+              <li class="nav-item d-flex gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23"
+                  height="23"
+                  fill="currentColor"
+                  class="bi bi-house"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+                  />
+                </svg>
+                <a
+                  class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                  href="#"
+                  >Dashbord</a
+                >
+              </li>
+              <li class="nav-item d-flex gap-2 nav-item-active">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23"
+                  height="23"
+                  fill="currentColor"
+                  class="bi bi-card-checklist"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+                  />
+                  <path
+                    d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"
+                  />
+                </svg>
+                <a
+                  class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                  href="Todo.html"
+                  >ToDo</a
+                >
+              </li>
+              <li class="nav-item d-flex gap-2">
+                <img
+                  src="images/icon/focus1.svg"
+                  width="25"
+                  height="25"
+                  alt=""
+                />
+                <a
+                  class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                  href="focus.html"
+                  target="_parent"
+                  >Focus</a
+                >
+              </li>
+              <li class="nav-item d-flex gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  fill="currentColor"
+                  class="bi bi-calendar-week"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+                  />
+                  <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+                  />
+                </svg>
+                <a
+                  class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                  href="#"
+                  >Tabel</a
+                >
+              </li>
+              <li class="nav-item d-flex gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  fill="currentColor"
+                  class="bi bi-graph-up-arrow"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"
+                  />
+                </svg>
+                <a
+                  class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                  href="#"
+                  >Plan</a
+                >
+              </li>
+            </ul>
           </div>
-          <hr>
-          <ul class="nav d-block">
+        </div>
+
+        <div
+          class="d-flex col-lg-2 d-none d-lg-block p-0 m-0 vh-100 shadow nav-container flex-column align-items-center"
+        >
+          <div class="logo-container">
+            <span class="nav-logo text-light fs-5 fw-bold"> M_KH </span>
+          </div>
+          <hr />
+          <ul class="nav d-block p-0">
+            <!-- active?? -->
             <li class="nav-item d-flex gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-house"
-                viewBox="0 0 16 16">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                class="bi bi-house"
+                viewBox="0 0 16 16"
+              >
                 <path
-                  d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                  d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+                />
               </svg>
-              <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">داشبورد</a>
+              <a
+                class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                href="#"
+                >Dashbord</a
+              >
             </li>
             <li class="nav-item d-flex gap-2 nav-item-active">
-              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
-                class="bi bi-card-checklist" viewBox="0 0 16 16">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                fill="currentColor"
+                class="bi bi-card-checklist"
+                viewBox="0 0 16 16"
+              >
                 <path
-                  d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                  d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+                />
                 <path
-                  d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0" />
+                  d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"
+                />
               </svg>
-              <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="Todo.html">برنامه</a>
+              <a
+                class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                href="Todo.html"
+                >ToDo</a
+              >
             </li>
             <li class="nav-item d-flex gap-2">
-              <img src="images/icon/focus1.svg" width="25" height="25" alt="">
-              <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="focus.html"
-                target="_parent">تمرکز</a>
+              <img src="images/icon/focus1.svg" width="25" height="25" alt="" />
+              <a
+                class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                href="focus.html"
+                target="_parent"
+                >Focus</a
+              >
             </li>
             <li class="nav-item d-flex gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
-                class="bi bi-calendar-week" viewBox="0 0 16 16">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                fill="currentColor"
+                class="bi bi-calendar-week"
+                viewBox="0 0 16 16"
+              >
                 <path
-                  d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
+                  d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+                />
                 <path
-                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+                />
               </svg>
-              <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">تقویم</a>
+              <a
+                class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                href="#"
+                >Tabel</a
+              >
             </li>
             <li class="nav-item d-flex gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
-                class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                fill="currentColor"
+                class="bi bi-graph-up-arrow"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"
+                />
               </svg>
-              <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">تحلیل</a>
+              <a
+                class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light"
+                href="#"
+                >Plan</a
+              >
             </li>
           </ul>
         </div>
-      </div>
 
-      <div class="d-flex col-lg-2 d-none d-lg-block p-0 m-0 vh-100 shadow nav-container flex-column align-items-center">
-        <div class="logo-container">
-          <span class="nav-logo text-light fs-5 fw-bold">لوگوی سایت </span>
-        </div>
-        <hr>
-        <ul class="nav d-block">
-          <!-- active?? -->
-          <li class="nav-item d-flex gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-house"
-              viewBox="0 0 16 16">
-              <path
-                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-            </svg>
-            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">داشبورد</a>
-          </li>
-          <li class="nav-item nav-item-active d-flex gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
-              class="bi bi-card-checklist" viewBox="0 0 16 16">
-              <path
-                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
-              <path
-                d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0" />
-            </svg>
-            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="Todo.html">برنامه</a>
-          </li>
-          <li class="nav-item d-flex gap-2">
-            <img src="images/icon/focus1.svg" width="25" height="25" alt="">
-            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="focus.html" target="_parent">تمرکز</a>
-          </li>
-          <li class="nav-item d-flex gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
-              class="bi bi-calendar-week" viewBox="0 0 16 16">
-              <path
-                d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
-              <path
-                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-            </svg>
-            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">تقویم</a>
-          </li>
-          <li class="nav-item d-flex gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
-              class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
-            </svg>
-            <a class="nav-link m-0 p-0 text-decoration-none fs-5 fw-light" href="#">تحلیل</a>
-          </li>
-        </ul>
-      </div>
+        <!-- sidebar end -------------------------------->
 
-      <!-- sidebar end -------------------------------->
+        <div class="col-lg-10 p-0">
+          <!-- header start ------------------------------>
 
-      <div class="col-lg-10 p-0">
-
-        <!-- header start ------------------------------>
-
-        <nav class="navbar navbar-expand-lg main-Header py-4">
-          <div class="container-fluid">
-            <button class="btn offcanvas-toggle d-lg-none" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="navBarBtn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
-                viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-              </svg>
-            </button>
-            <!-- collapse ! -->
-            <!-- <form class="d-flex ps-4">
+          <nav class="navbar navbar-expand-lg main-Header py-4">
+            <div class="container-fluid">
+              <button
+                class="btn offcanvas-toggle d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+                id="navBarBtn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-list"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                  />
+                </svg>
+              </button>
+              <!-- collapse ! -->
+              <!-- <form class="d-flex ps-4">
               <input class="form-control me-2 search-input" type="search" placeholder="جست و جو  ..."
                 aria-label="Search">
             </form> -->
-          </div>
-        </nav>
-
-        <!-- <div class="breadcrumb">TODO / BreadCrump</div> =======-->
-
-        <!-- header end ---------------------------------->
-        <!-- start main content -------------------------->
-        <!-- alert -->
-        <div class="alert alert-info d-none" id="emptyInput-alert" role="alert">
-          برنامه ی خود را وارد کنید !
-        </div>
-        <!-- alert end -->
-        <div class="card shadow m-4 mt-5 border-0 main-card-todo">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-sm-6">
-                <h5 class="todo-count fw-bold ">چیزی باقی نمانده است!</h5>
-              </div>
-              <div class="col-sm-6">
-                <!-- the wave effect wont work ... -->
-                <a href="#" class="float-end btn btn-sm btn-primary text-light waves-effect waves-red"
-                  id="btn-archive">پاکسازی</a>
-              </div>
             </div>
-            <form name="todo-form" id="todo-form" class="mt-4">
+          </nav>
+
+          <!-- <div class="breadcrumb">TODO / BreadCrump</div> =======-->
+
+          <!-- header end ---------------------------------->
+          <!-- start main content -------------------------->
+          <!-- alert -->
+          <div
+            class="alert alert-info d-none"
+            id="emptyInput-alert"
+            role="alert"
+          >
+            Add Your Task !
+          </div>
+          <!-- alert end -->
+          <div class="card shadow m-4 mt-5 border-0 main-card-todo">
+            <div class="card-body">
               <div class="row">
-                <div class="row col-sm-9 todoAdd-input">
-                  <div class="col-sm-9">
-                    <input type="text" id="todoAdd-input" name="todo-input-text" class="form-control"
-                      placeholder="روش پیشنهادی : روانشناسی | 20 صفحه | 2 ساعت" data-listener-added_33ca8241="true">
-                  </div>
-                  <div class="col-sm-3">
-                    <input type="text" id="todoDate-input" name="date-input-text" class="form-control"
-                      placeholder="مهلت اتمام :" data-listener-added_33ca8241="true">
-                  </div>
+                <div class="col-sm-6">
+                  <h5 class="todo-count fw-bold">No ToDo Left!</h5>
                 </div>
-                <div class="col-sm-3 todo-addBtn">
-                  <button class="btn-primary btn-md btn-block btn waves-effect waves-light w-100" type="button"
-                    id="todo-btn-submit">افزودن</button>
+                <div class="col-sm-6">
+                  <!-- the wave effect wont work ... -->
+                  <a
+                    href="#"
+                    class="float-start btn btn-sm btn-primary text-light waves-effect waves-red"
+                    id="btn-archive"
+                    >Clear</a
+                  >
                 </div>
               </div>
-            </form>
-            <ul class="list-group mt-5 todo-list" id="todo-list">
-              <!-- a sample li start-->
-              <!-- <li class="list-group-item border-0 pl-1 my-2">
+              <form name="todo-form" id="todo-form" class="mt-4">
+                <div class="row">
+                  <div class="row col-sm-9 todoAdd-input">
+                    <div class="col-sm-9">
+                      <input
+                        type="text"
+                        id="todoAdd-input"
+                        name="todo-input-text"
+                        class="form-control"
+                        placeholder="Method: Biology | 20 Pages | 2 Hours"
+                        data-listener-added_33ca8241="true"
+                      />
+                    </div>
+                    <div class="col-sm-3">
+                      <input
+                        type="text"
+                        id="todoDate-input"
+                        name="date-input-text"
+                        class="form-control"
+                        placeholder=" Deadline :"
+                        data-listener-added_33ca8241="true"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-3 todo-addBtn">
+                    <button
+                      class="btn-primary btn-md btn-block btn waves-effect waves-light w-100"
+                      type="button"
+                      id="todo-btn-submit"
+                    >
+                      ADD
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <ul class="list-group mt-5 todo-list" id="todo-list">
+                <!-- a sample li start-->
+                <!-- <li class="list-group-item border-0 pl-1 my-2">
                 <div class="checkbox checkbox-primary">
                   <input class="todo-input" id="0" type="checkbox">
                   <label for="0">برگ هایم</label>
                 </div>
               </li> -->
-              <!-- a sample li end-->
-            </ul>
-          </div>
-        </div>
-
-        <!-- organize box -->
-        <div class="card shadow m-4 mt-5 border-0 main-card-org">
-          <div class="card-body">
-            <div class="org-header d-flex justify-content-between">
-              <span>اولویت</span>
-              <span>برنامه</span>
-              <span>مهلت</span>
+                <!-- a sample li end-->
+              </ul>
             </div>
-            <ul class="list-group mt-3 org-list" id="org-list">
-              <!-- sample org start-->
-              <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+          </div>
+
+          <!-- organize box -->
+          <div class="card shadow m-4 mt-5 border-0 main-card-org">
+            <div class="card-body">
+              <div class="org-header d-flex justify-content-between">
+                <span>Priority</span>
+                <span>ToDo</span>
+                <span>Deadline</span>
+              </div>
+              <ul class="list-group mt-3 org-list" id="org-list">
+                <!-- sample org start-->
+                <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
 
                </li> -->
-              <!-- sample org end -->
-            </ul>
+                <!-- sample org end -->
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <!-- end main content ----------------------------->
+          <!-- end main content ----------------------------->
+        </div>
       </div>
     </div>
-  </div>
 
-
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/َAddTodo.js" type="module"></script>
-  <script src="js/organizeTodo.js" type="module"></script>
-</body>
-
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/َAddTodo.js" type="module"></script>
+    <script src="js/organizeTodo.js" type="module"></script>
+  </body>
 </html>
