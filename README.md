@@ -14,12 +14,12 @@ Stay productive with a smart to-do list and a fully customizable focus timer. Or
 - **Vanilla JavaScript** — for logic and interactivity  
 - **Bootstrap** — for modern and responsive UI  
 
-📸 Screenshots
+## 📸 Screenshots
 
-![Bite Alchemy Home Page](images/Todo.png)
-![Bite Alchemy Home Page](images/todo2.png)
-![Bite Alchemy Home Page](images/timer.png)
-![Bite Alchemy Home Page](images/timer2.png)
+![Todo Page](images/Todo.png)
+![Todo Page](images/todo2.png)
+![Focus Page](images/timer.png)
+![Focus Page](images/timer2.png)
 
 ## 📬 Contact
 
